@@ -1,1 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hidster KvK</title>
+  <style>
+    body { font-family: Arial; text-align: center; }
+    img { margin: 20px; }
+    .meta { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>🎵 Hidster KvK 0-45 🎵</h1>
+
+  <img src="data:image/png;base64,{{ qr }}" />
+
+  {% if song %}
+    <div class="meta">
+      <h2>{{ song.title }}</h2>
+      <p>{{ song.artist }}</p>
+      <p>Album: {{ song.album_name }} ({{ song.album_year }})</p>
+      <p>Jaar: {{ song.year }}</p>
+
+      <a href="/next"><button>Volgende 🎲</button></a>
+    </div>
+  {% else %}
+    <a href="/reveal"><button>Laat maar zien!</button></a>
+  {% endif %}
+
+</body>
+</html>
 
